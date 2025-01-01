@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy New Year 2025! 🎆</h1>
+        <p>
+            A new dawn breaks, the year unfolds,  
+            With dreams to chase and stories untold.  
+            May joy and love light up your days,  
+            And hope guide you through life's maze.  
+            Here's to new beginnings, bold and bright,  
+            Wishing you happiness, endless delight!  
+        </p>
+        <footer>Designed with ❤️ by Vishwas</footer>
+    </div>
+
+    <script>
+        // Function to create random confetti pieces
+        function createConfettiPiece() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = `${Math.random() * 100}vw`;
+            confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+            document.body.appendChild(confetti);
+
+            // Remove confetti after animation
+            setTimeout(() => confetti.remove(), 5000);
+        }
+
+        // Generate confetti at regular intervals
+        setInterval(createConfettiPiece, 200);
+    </script>
+</body>
+</html>
